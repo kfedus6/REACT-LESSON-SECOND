@@ -1,0 +1,46 @@
+.main__task {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+}
+/* 
+.block__list {
+   border: "2px solid black";
+   width: "300px";
+   font-size: "24px";
+   padding: "10px";
+   display: "flex";
+} */
+
+.btn button {
+   font-size: 15px;
+   border-radius: 20px;
+   background-color: red;
+   color: white;
+   cursor: pointer;
+}
+
+.form__task {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.form__task button {
+   font-size: 14px;
+   border-radius: 5px;
+}
+
+.task__new {
+   height: 20px;
+   border-radius: 5px;
+}
+
+.priority__new {
+   height: 20px;
+   border-radius: 5px;
+   margin: 5px 5px 5px 5px;
+}
