@@ -13,7 +13,9 @@ class FormAddTask extends Component {
    }
 
    press() {
-      console.log(this.state.task);
+      const task = { nameTask: this.state.task, priority: this.state.priority }
+      console.log(task)
+      this.props.addTasks(task);
    }
 
    changeTask(e) {

@@ -1,5 +1,6 @@
 import { React, Component } from "react";
 import FormAddTask from "./Components/FormAddTask";
+import Posts from "./Components/Posts";
 import TaskList from "./Components/TaskList";
 
 import './Main.css'
@@ -17,6 +18,7 @@ class App extends Component {
          ]
       }
       this.removeTask = this.removeTask.bind(this)
+      this.addTasks = this.addTasks.bind(this)
    }
 
    removeTask(task) {
@@ -25,16 +27,18 @@ class App extends Component {
       this.setState({ tasks: new_tasks })
    }
 
-
    addTasks(task) {
-      this.setState(task);
+      console.log('s')
+      this.setState({ tasks: [...this.state.tasks, task] });
    }
 
    render() {
       console.log('Передаем функцию удаления в таск лист')
       return <>
-         <FormAddTask tasksList={this.state.tasks} />
+         <a href="#">text</a>
+         <FormAddTask tasksList={this.state.tasks} addTasks={this.addTasks} />
          <TaskList removeTask={this.removeTask} tasksList={this.state.tasks} />
+         <Posts></Posts>
       </>
    }
 }

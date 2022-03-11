@@ -8,6 +8,9 @@ class TaskList extends Component {
 
    render() {
       console.log('Передаем функцию удаления из такс лист в таск')
+      if (this.props.tasksList.length == 0) {
+         return <div>Постон нету</div>
+      }
       let tasks = this.props.tasksList.map((taskObject, index) => {
          return <Task key={index} removeTask={this.props.removeTask} number={index + 1} task={taskObject} />
       })
@@ -18,4 +21,5 @@ class TaskList extends Component {
       );
    }
 }
+
 export default TaskList;
